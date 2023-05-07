@@ -1,3 +1,8 @@
-## Django Template
+## Lexicon of Science in Asia
 
-[![Deploy on Railway](https://railway.app/button.svg)](https://railway.app/new/template/GB6Eki?referralCode=U5zXSw)
+[Click here for website!](https://lexicon-site-of-asia.up.railway.app/)
+
+A Multilingual Historical Database For Transregional and Comparative Research in the History of Science.
+
+
+Managed by students at the University of Toronto
