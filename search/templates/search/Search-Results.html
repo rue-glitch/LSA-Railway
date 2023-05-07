@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Results</title>
+</head>
+<body>
+Hey, you found the search results page!
+
+<ul>
+    <li>
+      Your Query: {{ form.data.search_query }}
+    </li>
+    {% for item in results %}
+    <li>
+      {{ item }}
+    </li>
+    {% endfor %}
+</ul>
+</body>
+</html>
