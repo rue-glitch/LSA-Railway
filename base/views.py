@@ -55,7 +55,7 @@ def contact(request):
 
 
 def news(request):
-    return render(request, "base/News.html")
+    return render(request, "base/Under-Construction.html")
 
 
 def thanks(request):
@@ -64,3 +64,7 @@ def thanks(request):
 
 def lexicon(request):
     return render(request, "base/Lexicon.html")
+
+
+def contribute(request):
+    return render(request, "base/Under-Construction.html")
