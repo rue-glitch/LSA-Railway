@@ -92,3 +92,8 @@ def contribute(request):
         print("SECOND IF HERE")
 
     return render(request, "base/Contact.html", {'form': form})
+
+
+def csrf_failure(request, reason=""):
+    reason = {'message': 'Overriding CSRF error'}
+    return render(request, "base/Under-Construction.html", reason)
