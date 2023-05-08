@@ -40,7 +40,9 @@ def search(request):
             pprint.pp(r)
 
             # have temporarily made this "Search-Results.html" (note the plural) to test result finding
-            return render(request, 'search/Search-Results.html', {'form': form, 'results': r})
+            # original command is below: [for now we have set to under construction]
+            #return render(request, 'search/Search-Results.html', {'form': form, 'results': r})
+            return render(request, "base/Under-Construction.html")
 
     else:
         form = SearchForm()
@@ -48,12 +50,15 @@ def search(request):
     return render(request, 'search/Search.html', {'form': form})
 
 
+
 def advanced_search(request):
-    return render(request, 'search/Advanced-Search.html')
+    #return render(request, 'search/Advanced-Search.html')
+    return render(request, "base/Under-Construction.html")
 
 
 def search_results(request):
-    return render(request, 'search/Search-Result.html')
+    #return render(request, 'search/Search-Result.html')
+    return render(request, "base/Under-Construction.html")
 
 
 class SearchHomeView(TemplateView):

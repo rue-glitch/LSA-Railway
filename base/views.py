@@ -67,4 +67,28 @@ def lexicon(request):
 
 
 def contribute(request):
-    return render(request, "base/Under-Construction.html")
+    print(request.method)
+
+    if request.method == 'POST':
+        form = ContactForm(request.POST)  # create a form instance and populate it with data from the request:
+        if form.is_valid():
+            # process the data in form.cleaned_data (a dict) as required
+            print(form.cleaned_data)
+
+            send_mail(
+                'Lex. Sci. Asia: Message Received',  # subject
+                form.cleaned_data['user_message'],  # email message
+                None,  # email that this message from -- b/c None, sent from default email (defined in settings)
+                ['lexsciasia@gmail.com'],  # email this is getting sent to (can have more than one)
+                fail_silently=False,
+            )
+
+            # redirect to a new URL (relative to current page):
+            return HttpResponseRedirect('thanks/')
+
+    # if a GET (or any other method) we'll create a blank form
+    else:
+        form = ContactForm()
+        print("SECOND IF HERE")
+
+    return render(request, "base/Contact.html", {'form': form})
